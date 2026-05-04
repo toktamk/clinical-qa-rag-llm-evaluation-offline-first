@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Clinical RAG Evaluation Dataset Schema v1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "question_id",
+    "question",
+    "question_type",
+    "category",
+    "difficulty",
+    "gold_answer_short",
+    "gold_answer_long",
+    "relevant_doc_ids",
+    "relevant_chunk_ids",
+    "required_citations",
+    "requires_abstention",
+    "clinical_risk",
+    "split",
+    "review_status"
+  ],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "question_id": { "type": "string" },
+    "question": { "type": "string", "minLength": 10 },
+    "question_type": { "type": "string" },
+    "clinical_intent": { "type": "string" },
+    "category": {
+      "type": "string",
+      "enum": [
+        "direct_evidence",
+        "multi_hop_evidence",
+        "conflicting_evidence",
+        "insufficient_evidence",
+        "out_of_domain",
+        "citation_stress_test",
+        "clinical_risk_sensitive",
+        "negative_control",
+        "definition_or_concept",
+        "methodology_question"
+      ]
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["easy", "medium", "hard"]
+    },
+    "gold_answer_short": { "type": "string" },
+    "gold_answer_long": { "type": "string" },
+    "source_corpus": { "type": "string" },
+    "relevant_doc_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "relevant_chunk_ids": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "required_citations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "requires_abstention": { "type": "boolean" },
+    "abstention_reason": {
+      "type": ["string", "null"]
+    },
+    "clinical_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high"]
+    },
+    "split": {
+      "type": "string",
+      "enum": ["train", "validation", "test"]
+    },
+    "review_status": {
+      "type": "string",
+      "enum": ["draft", "needs_review", "validated", "rejected"]
+    }
+  }
+}

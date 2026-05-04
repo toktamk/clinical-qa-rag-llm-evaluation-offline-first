@@ -1,0 +1,50 @@
+Title: Uncertain Thresholds for Therapy L in Condition N
+1. Background
+
+Condition N is associated with variable biomarker expression.
+
+2. Population
+
+Adult patients with Condition N.
+
+3. Intervention
+
+Therapy L is administered at 30–60 mg depending on clinical judgement.
+
+4. Monitoring
+
+Monitoring intervals are not standardised.
+
+Some clinicians recommend monitoring every 4 weeks.
+
+Other clinicians recommend intervals of 8–12 weeks.
+
+Some studies define “frequent monitoring” as every 6 weeks.
+
+Conditional rules (conflicting):
+
+Monitoring should increase if biomarker levels rise by more than 10%.
+Other studies define this threshold as 20%.
+Some reports do not define a numerical threshold at all.
+
+Monitoring may also increase if a “clinically meaningful change” is observed, although this term is not consistently defined.
+
+5. Outcomes
+
+Improvement is described as:
+
+≥15% symptom reduction in some studies
+≥25% reduction in others
+“clinically meaningful improvement” without numeric definition in others
+
+6. Risks
+
+Adverse effects vary and are inconsistently reported.
+
+7. Evidence Summary
+
+Studies use inconsistent:
+
+thresholds (10%, 15%, 20%, 25%)
+definitions
+monitoring intervals

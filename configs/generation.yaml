@@ -1,0 +1,9 @@
+generation_mode: two_step
+
+model_name: mistralai/Mistral-7B-Instruct-v0.2
+
+max_tokens: 512
+
+verification:
+  enabled: true
+  min_grounding_score: 0.3

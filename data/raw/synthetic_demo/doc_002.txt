@@ -1,0 +1,23 @@
+Doc ID: doc_002
+Title: Risk Factors and Follow-Up in Condition Y
+
+1. Background
+Condition Y is associated with metabolic dysregulation and affects approximately 8% of the population.
+
+2. Population
+Adults with diagnosed Condition Y and at least one metabolic risk factor are included.
+
+3. Intervention
+Management includes lifestyle modification and optional use of Medication B.
+
+4. Monitoring
+Patients with Condition Y should undergo baseline cardiovascular risk assessment. Those with high-risk profiles require follow-up every 6 months, while low-risk patients may be monitored annually.
+
+5. Outcomes
+Improvement is defined as stabilisation of metabolic markers over a 6-month period.
+
+6. Risks
+Patients with high baseline risk factors have increased likelihood of adverse cardiovascular events.
+
+7. Evidence Summary
+Observational cohort studies involving 5,000 patients indicate that regular monitoring reduces adverse outcomes in high-risk populations.

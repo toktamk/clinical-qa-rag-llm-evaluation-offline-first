@@ -1,0 +1,36 @@
+{
+  "eval_file": "data/evaluation/clinical_rag_eval_full.draft.jsonl",
+  "chunks_file": "data/processed/chunks.jsonl",
+  "summary": {
+    "total_items": 100,
+    "category_counts": {
+      "direct_evidence": 52,
+      "clinical_risk_sensitive": 13,
+      "multi_hop_evidence": 13,
+      "temporal_reasoning": 12,
+      "citation_stress_test": 3,
+      "conflicting_evidence": 4,
+      "ambiguous_evidence": 2,
+      "insufficient_evidence": 1
+    },
+    "difficulty_counts": {
+      "easy": 39,
+      "medium": 52,
+      "hard": 9
+    },
+    "review_status_counts": {
+      "draft": 100
+    },
+    "abstention_count": 1,
+    "clinical_risk_counts": {
+      "medium": 66,
+      "high": 34
+    }
+  },
+  "chunk_count": 91,
+  "unique_chunk_count": 91,
+  "total_errors": 0,
+  "total_warnings": 0,
+  "passed": true,
+  "items_with_issues": []
+}

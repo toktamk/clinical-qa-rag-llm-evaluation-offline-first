@@ -1,0 +1,42 @@
+Title: Adaptive Management of Therapy D Based on Dynamic Biomarker Response in Condition Q
+1. Background
+
+Chronic Condition Q is a fluctuating inflammatory disorder affecting approximately 6–9% of adults aged 30–70 years. Disease progression is characterised by episodic increases in inflammatory biomarkers rather than steady decline. Therapy D is used to modulate inflammatory activity in a dynamic manner.
+
+2. Population
+
+This guideline applies to adult patients aged 18–75 years with confirmed Condition Q and at least one documented biomarker fluctuation within the past 6 months. Patients with stable biomarker levels over 12 months are excluded.
+
+3. Intervention
+
+Therapy D is initiated at 100 mg daily. Dose adjustments are not time-based but are triggered by biomarker changes. Dose escalation to 150 mg occurs only when biomarker levels increase by ≥20% from baseline.
+
+4. Monitoring
+
+Monitoring is event-driven rather than fixed-schedule.
+
+Baseline laboratory testing must be performed prior to initiation. Subsequent testing is triggered when symptoms worsen or when patient-reported scores increase by ≥15%.
+
+Patients must perform self-reported symptom tracking every 7 days.
+
+Conditional monitoring rule 1:
+If inflammatory biomarkers increase by ≥20%, laboratory testing must occur within 72 hours.
+
+Conditional monitoring rule 2:
+If no biomarker increase is observed for 12 weeks, monitoring frequency may be reduced to every 16 weeks.
+
+No fixed periodic monitoring schedule is required.
+
+5. Outcomes
+
+Treatment success is defined as stabilisation of biomarker variability within ±10% over a 12-week period.
+
+Instability is defined as ≥20% fluctuation within any 4-week window.
+
+6. Risks
+
+Common adverse effects include fatigue (18%) and gastrointestinal symptoms (12%). Over-adjustment of therapy increases risk of metabolic imbalance by approximately 10%.
+
+7. Evidence Summary
+
+Evidence is mixed. Two randomised trials suggest benefit from dynamic adjustment strategies, while one observational study reports no significant difference compared to fixed monitoring schedules.

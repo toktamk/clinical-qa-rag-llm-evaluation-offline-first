@@ -1,0 +1,23 @@
+Doc ID: doc_003
+Title: Evidence-Based Use of Intervention C
+
+1. Background
+Intervention C is used in the management of acute episodes of Condition Z.
+
+2. Population
+Applicable to adult patients presenting with confirmed acute episodes of Condition Z.
+
+3. Intervention
+Intervention C is administered as a single dose during acute episodes.
+
+4. Monitoring
+No routine long-term monitoring is required after a single dose. However, patients should be observed for immediate adverse reactions within 24 hours.
+
+5. Outcomes
+Successful intervention is defined as symptom resolution within 48 hours.
+
+6. Risks
+Adverse reactions include transient dizziness and rare allergic responses.
+
+7. Evidence Summary
+Evidence is derived from controlled clinical trials with sample sizes ranging from 200 to 800 participants, demonstrating rapid symptom resolution compared to placebo.

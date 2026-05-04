@@ -1,0 +1,37 @@
+# 📄 **Doc ID: doc_008**
+
+## **Title: Preventive Use of Therapy H in High-Risk Population U**
+
+### **1. Background**
+
+Condition U is a preventable disorder with an incidence of 2–4% annually in high-risk populations. Therapy H is used as a preventive intervention to reduce incidence rates.
+
+### **2. Population**
+
+This guideline applies to adults aged 30–75 years with a documented high-risk profile defined by ≥2 risk factors. Patients without risk factors are excluded.
+
+### **3. Intervention**
+
+Therapy H is administered at 25 mg daily for a preventive duration of 12 months. Therapy may be extended to 24 months in high-risk individuals.
+
+### **4. Monitoring**
+
+Baseline risk assessment and laboratory testing must be performed prior to initiation. Follow-up evaluations must occur at 1 month and 3 months.
+
+Patients should undergo monitoring every 3 months during therapy. After 12 months, monitoring may be reduced to every 6 months if risk factors remain stable.
+
+**Conditional monitoring rule:**
+If a new risk factor emerges during therapy, monitoring frequency must increase to monthly assessments for 3 months.
+
+### **5. Outcomes**
+
+Preventive success is defined as absence of Condition U during the monitoring period. Risk reduction of 30–45% is expected in adherent patients.
+
+### **6. Risks**
+
+Common adverse effects include mild fatigue (10%) and headache (8%). Serious adverse effects occur in less than 1% of patients.
+
+### **7. Evidence Summary**
+
+Evidence is based on three preventive trials involving 2,100 patients. Results show a statistically significant reduction in incidence compared to placebo.
+

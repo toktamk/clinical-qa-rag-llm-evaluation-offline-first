@@ -1,0 +1,16 @@
+[
+  {
+    "doc_id": "doc_001",
+    "source": "synthetic",
+    "path": "data/raw/synthetic_demo/doc_001.txt",
+    "licence": "internal",
+    "ready_for_annotation": true
+  },
+  {
+    "doc_id": "pmc_0001",
+    "source": "pmc_oa",
+    "path": "data/raw/pmc_oa/pmc_0001.txt",
+    "licence": "CC-BY",
+    "ready_for_annotation": true
+  }
+]

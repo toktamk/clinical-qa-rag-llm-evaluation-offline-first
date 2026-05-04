@@ -1,0 +1,23 @@
+project:
+  name: offline-clinical-rag
+  version: 0.1
+
+models:
+  llm: mistralai/Mistral-7B-Instruct-v0.2
+  embedding: sentence-transformers/all-MiniLM-L6-v2
+
+retrieval:
+  chunk_size: 512
+  chunk_overlap: 100
+  top_k: 5
+
+vector_store:
+  type: faiss
+  path: storage/vector_store
+
+data:
+  raw_docs: data/raw
+  processed_docs: data/processed
+
+evaluation:
+  dataset: data/eval/qa_pairs.json

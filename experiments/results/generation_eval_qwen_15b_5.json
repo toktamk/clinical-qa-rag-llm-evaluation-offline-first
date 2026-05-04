@@ -1,0 +1,283 @@
+{
+  "eval_file": "data/evaluation/clinical_rag_eval_full.draft.jsonl",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "retriever": "hybrid",
+  "fusion_method": "weighted",
+  "top_k": 10,
+  "max_context_chunks": 5,
+  "summary": {
+    "total_items": 5,
+    "verification_pass_rate": 1.0,
+    "abstention_accuracy": 0.0,
+    "gold_abstention_rate": 0.0,
+    "predicted_abstention_rate": 1.0,
+    "forced_abstention_rate": 1.0,
+    "citation_precision_macro": 0.0,
+    "citation_recall_macro": 0.0,
+    "citation_precision_non_abstained_macro": 0.0,
+    "citation_recall_non_abstained_macro": 0.0,
+    "latency_mean_ms": 72825.21973999683,
+    "latency_p50_ms": 71281.65039999294,
+    "latency_p95_ms": 102419.5418999996,
+    "category_counts": {
+      "direct_evidence": 3,
+      "clinical_risk_sensitive": 1,
+      "multi_hop_evidence": 1
+    },
+    "difficulty_counts": {
+      "easy": 3,
+      "medium": 2
+    },
+    "verification_status_counts": {
+      "passed": 5
+    }
+  },
+  "per_item": [
+    {
+      "question_id": "q_doc_001_001",
+      "question": "According to the guideline, what monitoring is recommended in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 72113.30309999175,
+      "required_citations": [
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "INVALID: <true|false>\nInvalidity reason: <reason or null> According to the guideline, the recommended monitoring in doc_001 includes baseline blood testing (liver function and inflammatory markers) and follow-up blood monitoring within 2-4 weeks after initiation, followed by every 3 months thereafter. This monitoring is crucial during the first two to four weeks post-initiation due to potential risks such as mild gastrointestinal symptoms and rare complications like liver enzyme elevation that might require discontinuation. Regular monitoring every six months may be considered in other chronic conditions, but it is not applicable to Condition X. The intervention involves initiating therapy at a standard dose of 50 mg daily and adjusting doses based on initial assessments. [CHUNK_ID: doc_001_monitoring_chunk_001]",
+      "raw_model_output": "INVALID: <true|false>\nInvalidity reason: <reason or null> According to the guideline, the recommended monitoring in doc_001 includes baseline blood testing (liver function and inflammatory markers) and follow-up blood monitoring within 2-4 weeks after initiation, followed by every 3 months thereafter. This monitoring is crucial during the first two to four weeks post-initiation due to potential risks such as mild gastrointestinal symptoms and rare complications like liver enzyme elevation that might require discontinuation. Regular monitoring every six months may be considered in other chronic conditions, but it is not applicable to Condition X. The intervention involves initiating therapy at a standard dose of 50 mg daily and adjusting doses based on initial assessments. [CHUNK_ID: doc_001_monitoring_chunk_001]",
+      "retrieved_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_002",
+      "question": "How does the guideline define treatment success or response in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 71281.65039999294,
+      "required_citations": [
+        "doc_001_outcomes_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "To determine how the guideline defines treatment success or response in doc_001, we refer to the document titled \"Monitoring Strategy for Therapy A in Condition X\" located under section \"Outcomes\". According to this document, clinical improvement is defined as a reduction of approximately one-third (30%) in symptom severity scores within 8 weeks. This indicates that the primary criterion for treatment success in therapy A is achieving significant symptom relief within a specific timeframe. Additionally, the text mentions that lack of improvement after 12 weeks suggests treatment failure, further emphasizing the importance of measuring progress over time in assessing treatment efficacy. Therefore, based on the information provided, the guideline defines treatment success or response in therapy A as achieving clinically meaningful symptom improvements within the specified timeframe. [DOC_001]",
+      "raw_model_output": "To determine how the guideline defines treatment success or response in doc_001, we refer to the document titled \"Monitoring Strategy for Therapy A in Condition X\" located under section \"Outcomes\". According to this document, clinical improvement is defined as a reduction of approximately one-third (30%) in symptom severity scores within 8 weeks. This indicates that the primary criterion for treatment success in therapy A is achieving significant symptom relief within a specific timeframe. Additionally, the text mentions that lack of improvement after 12 weeks suggests treatment failure, further emphasizing the importance of measuring progress over time in assessing treatment efficacy. Therefore, based on the information provided, the guideline defines treatment success or response in therapy A as achieving clinically meaningful symptom improvements within the specified timeframe. [DOC_001]",
+      "retrieved_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_003",
+      "question": "What risks or adverse effects are reported in doc_001?",
+      "category": "clinical_risk_sensitive",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 60017.7212000126,
+      "required_citations": [
+        "doc_001_risks_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Invalid: <true|false>\nInvalidation reason: <reason or null> Based on the information provided, there is not enough evidence to determine specific risks or adverse effects from document `doc_001`. Therefore, the answer is:\n\n**INVALID**\n\nThis conclusion is based on the lack of direct mention of risks or adverse effects in document `doc_001`, which only provides general information about common and rare complications associated with therapies in conditions such as X, N, S, R, and U. To provide a more accurate response, additional relevant documents would be needed that specifically address the risks or adverse effects related to therapy A in condition X.",
+      "raw_model_output": "Invalid: <true|false>\nInvalidation reason: <reason or null> Based on the information provided, there is not enough evidence to determine specific risks or adverse effects from document `doc_001`. Therefore, the answer is:\n\n**INVALID**\n\nThis conclusion is based on the lack of direct mention of risks or adverse effects in document `doc_001`, which only provides general information about common and rare complications associated with therapies in conditions such as X, N, S, R, and U. To provide a more accurate response, additional relevant documents would be needed that specifically address the risks or adverse effects related to therapy A in condition X.",
+      "retrieved_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_004",
+      "question": "For the population described in doc_001, what monitoring approach is recommended?",
+      "category": "multi_hop_evidence",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 109996.10160000157,
+      "required_citations": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 2,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "INVALID: <true|false>\nInvalidity reason: <reason or null> Based on the information provided in the document, the recommended monitoring approach for the population described in doc_001 is as follows:\n\n**Baseline Blood Testing:** Patients starting Therapy A should undergo baseline blood testing, including liver function and inflammatory markers.\n\n**Follow-Up Monitoring:** Follow-up blood monitoring is recommended within 2-4 weeks after initiation and then every 3 months.\n\n**Critical Timing:** Monitoring at 2-4 weeks is critical, and monitoring at 2-4 weeks should not be delayed beyond 4 weeks.\n\n**Frequency Adjustment:** In some unrelated chronic conditions, a reduction in monitoring frequency to every 6 months may be appropriate; however, this does not apply to Condition X.\n\nThese recommendations are derived from the text provided under the section titled \"Monitoring\" in the document. The specific details about the timing and frequency of monitoring were extracted directly from the document's content. No additional external sources or data was cited here. Therefore, the answer is valid according to the given evidence. \n\nPlease note that the term \"Condition X\" refers to the condition being treated by Therapy A, which is not explicitly mentioned in the provided chunks. However, since the context suggests it relates to the",
+      "raw_model_output": "INVALID: <true|false>\nInvalidity reason: <reason or null> Based on the information provided in the document, the recommended monitoring approach for the population described in doc_001 is as follows:\n\n**Baseline Blood Testing:** Patients starting Therapy A should undergo baseline blood testing, including liver function and inflammatory markers.\n\n**Follow-Up Monitoring:** Follow-up blood monitoring is recommended within 2-4 weeks after initiation and then every 3 months.\n\n**Critical Timing:** Monitoring at 2-4 weeks is critical, and monitoring at 2-4 weeks should not be delayed beyond 4 weeks.\n\n**Frequency Adjustment:** In some unrelated chronic conditions, a reduction in monitoring frequency to every 6 months may be appropriate; however, this does not apply to Condition X.\n\nThese recommendations are derived from the text provided under the section titled \"Monitoring\" in the document. The specific details about the timing and frequency of monitoring were extracted directly from the document's content. No additional external sources or data was cited here. Therefore, the answer is valid according to the given evidence. \n\nPlease note that the term \"Condition X\" refers to the condition being treated by Therapy A, which is not explicitly mentioned in the provided chunks. However, since the context suggests it relates to the",
+      "retrieved_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_005",
+      "question": "According to the guideline, how is the intervention described in doc_001 administered or adjusted?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 50717.32239998528,
+      "required_citations": [
+        "doc_001_intervention_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation: According to the guidelines, the intervention described in doc_001 is administered as a single dose of 50 mg daily, which can be adjusted based on initial assessment. This aligns with the information provided in doc_001_intervention_chunk_001. No other interventions have been explicitly mentioned that require specific administration methods or adjustments not covered by the given evidence. Therefore, the abstention is justified because there isn't enough evidence to determine the exact administration method for the other interventions listed. [CHUNK_ID: abstained]",
+      "raw_model_output": "Explanation: According to the guidelines, the intervention described in doc_001 is administered as a single dose of 50 mg daily, which can be adjusted based on initial assessment. This aligns with the information provided in doc_001_intervention_chunk_001. No other interventions have been explicitly mentioned that require specific administration methods or adjustments not covered by the given evidence. Therefore, the abstention is justified because there isn't enough evidence to determine the exact administration method for the other interventions listed. [CHUNK_ID: abstained]",
+      "retrieved_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    }
+  ]
+}

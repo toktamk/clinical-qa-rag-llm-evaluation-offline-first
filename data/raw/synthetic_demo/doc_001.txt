@@ -1,0 +1,38 @@
+Title: Monitoring Strategy for Therapy A in Condition X
+1. Background
+
+Condition X is a chronic inflammatory disorder affecting approximately 5–10% of adults. Therapy A is commonly used for symptom control.
+
+Additional epidemiological reports suggest regional prevalence varies between 3% and 12%, although these estimates are not directly relevant to treatment decisions.
+
+2. Population
+
+This guidance applies to adult patients aged 18–75 diagnosed with moderate Condition X. It excludes patients with severe organ dysfunction.
+
+3. Intervention
+
+Therapy A is initiated at a standard dose of 50 mg daily. Dose adjustment may occur after initial assessment.
+
+4. Monitoring
+
+Patients starting Therapy A should undergo baseline blood testing, including liver function and inflammatory markers.
+
+Follow-up blood monitoring is recommended within 2–4 weeks after initiation and then every 3 months.
+
+Monitoring at 2–4 weeks is critical, and monitoring at 2–4 weeks should not be delayed beyond 4 weeks.
+
+A reduction in monitoring frequency to every 6 months may be appropriate in some unrelated chronic conditions, but this does not apply to Condition X.
+
+5. Outcomes
+
+Clinical improvement is defined as a reduction of approximately one-third (30%) in symptom severity scores within 8 weeks.
+
+Lack of improvement after 12 weeks suggests treatment failure.
+
+6. Risks
+
+Common adverse effects include mild gastrointestinal symptoms. Rare complications include liver enzyme elevation requiring discontinuation.
+
+7. Evidence Summary
+
+Evidence is based on three randomised controlled trials involving approximately 1,200 patients. These studies consistently showed improved symptom control with regular monitoring.

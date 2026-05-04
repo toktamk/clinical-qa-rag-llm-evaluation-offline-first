@@ -1,0 +1,85 @@
+{
+  "eval_file": "data/evaluation/clinical_rag_eval_full.draft.jsonl",
+  "model": "mock",
+  "retriever": "hybrid",
+  "fusion_method": "weighted",
+  "top_k": 10,
+  "max_context_chunks": 5,
+  "summary": {
+    "total_items": 1,
+    "verification_pass_rate": 1.0,
+    "abstention_accuracy": 1.0,
+    "gold_abstention_rate": 1.0,
+    "predicted_abstention_rate": 1.0,
+    "forced_abstention_rate": 0.0,
+    "citation_precision_macro": 0.0,
+    "citation_recall_macro": 0.0,
+    "citation_precision_non_abstained_macro": 0.0,
+    "citation_recall_non_abstained_macro": 0.0,
+    "latency_mean_ms": 46.422199986409396,
+    "latency_p50_ms": 46.422199986409396,
+    "latency_p95_ms": 46.422199986409396,
+    "category_counts": {
+      "insufficient_evidence": 1
+    },
+    "difficulty_counts": {
+      "medium": 1
+    },
+    "verification_status_counts": {
+      "passed": 1
+    }
+  },
+  "per_item": [
+    {
+      "question_id": "q_doc_013_007",
+      "question": "What standard monitoring or outcome recommendation is available for the intervention in doc_013?",
+      "category": "insufficient_evidence",
+      "difficulty": "medium",
+      "gold_requires_abstention": true,
+      "predicted_abstained": true,
+      "abstention_correct": true,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 46.422199986409396,
+      "required_citations": [
+        "doc_013_monitoring_chunk_001",
+        "doc_013_outcomes_chunk_001",
+        "doc_013_evidence_summary_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_013_monitoring_chunk_001",
+        "doc_013_outcomes_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_013_population_chunk_001",
+        "doc_013_evidence_summary_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 3,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_013_monitoring_chunk_001",
+        "doc_013_outcomes_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_013_population_chunk_001",
+        "doc_013_evidence_summary_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    }
+  ]
+}

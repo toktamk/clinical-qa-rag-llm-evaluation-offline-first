@@ -1,0 +1,43 @@
+Doc ID: doc_011
+Title: Conflicting Evidence on the Effectiveness of Therapy K in Condition M
+1. Background
+
+Condition M affects approximately 5–8% of adults. Therapy K is widely used, but its effectiveness remains debated.
+
+2. Population
+
+Applies to adult patients aged 18–70 years with confirmed Condition M.
+
+Different studies use different populations, including:
+
+general adult population
+high-risk subgroups
+patients with severe baseline symptoms
+3. Intervention
+
+Therapy K is administered at 50 mg daily for 12 weeks.
+
+4. Monitoring
+
+Baseline and follow-up at 6 weeks and 12 weeks are recommended.
+
+5. Outcomes
+
+Study A reports a 30% improvement in symptom severity at 12 weeks in the general population.
+Study B reports no statistically significant improvement in high-risk patients.
+
+Study C reports improvement in laboratory biomarkers but no improvement in patient-reported symptoms.
+
+Study D reports delayed improvement only after 24 weeks, which differs from other studies.
+
+6. Risks
+
+Adverse effects include fatigue (15%) and headache (10%).
+
+7. Evidence Summary
+
+Evidence is inconsistent due to:
+
+different populations (general vs high-risk)
+different endpoints (symptoms vs biomarkers)
+different timeframes (12 weeks vs 24 weeks)

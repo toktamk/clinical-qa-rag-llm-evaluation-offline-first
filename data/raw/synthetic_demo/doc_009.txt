@@ -1,0 +1,36 @@
+# 📄 **Doc ID: doc_009**
+
+## **Title: Dose Adjustment Strategy for Therapy I in Condition V**
+
+### **1. Background**
+
+Condition V is a chronic disorder affecting approximately 7–11% of adults. Therapy I requires careful dose adjustment to optimise efficacy and minimise toxicity.
+
+### **2. Population**
+
+This guideline applies to adults aged 18–70 years diagnosed with Condition V. Patients with severe renal impairment are excluded.
+
+### **3. Intervention**
+
+Therapy I is initiated at 20 mg daily. Dose adjustments are made in increments of 10 mg every 4 weeks based on clinical response.
+
+### **4. Monitoring**
+
+Baseline laboratory testing must include renal and hepatic function assessment. Follow-up testing must occur at 2 weeks and 6 weeks.
+
+Patients should undergo monitoring every 4 weeks during dose adjustment. Once a stable dose is reached, monitoring may be reduced to every 12 weeks.
+
+**Conditional monitoring rule:**
+If adverse effects occur at any dose level, monitoring must increase to every 2 weeks until resolution.
+
+### **5. Outcomes**
+
+Optimal response is defined as symptom reduction of ≥40% within 12 weeks. Suboptimal response is defined as 20–39% reduction.
+
+### **6. Risks**
+
+Adverse effects include dizziness (18%) and metabolic imbalance (9%). Severe toxicity occurs in approximately 2% of patients.
+
+### **7. Evidence Summary**
+
+Evidence from dose-ranging studies involving 1,500 patients supports stepwise dose adjustment to improve outcomes and reduce toxicity.

@@ -1,0 +1,47 @@
+documents:
+  input_dir: data/raw/synthetic_demo
+  registry_path: data/raw/document_registry.json
+
+chunking:
+  default_strategy: section_sentence
+  strategies:
+    section:
+      enabled: true
+    fixed_window:
+      enabled: true
+      chunk_size_tokens: 256
+      overlap_tokens: 64
+    section_sentence:
+      enabled: true
+      max_tokens: 180
+      min_tokens: 40
+      overlap_sentences: 1
+
+qa_generation:
+  mode: template
+  items_per_doc: 6
+  include_categories:
+    - direct_evidence
+    - multi_hop_evidence
+    - citation_stress_test
+    - conflicting_evidence
+    - ambiguous_evidence
+    - insufficient_evidence
+    - clinical_risk_sensitive
+
+validation:
+  require_atomic_claims: true
+  require_required_citations: true
+  require_document_level_split: true
+  allow_draft_items: false
+
+splitting:
+  strategy: document_level
+  validation_docs:
+    - doc_006
+    - doc_007
+    - doc_012
+  test_docs:
+    - doc_010
+    - doc_011
+    - doc_013

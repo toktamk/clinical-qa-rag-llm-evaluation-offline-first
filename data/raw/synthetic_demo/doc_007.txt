@@ -1,0 +1,39 @@
+Title: Discontinuation and Reinitiation Strategy for Therapy G in Condition T
+1. Background
+
+Condition T is a progressive disorder with variable response to long-term therapy. Evidence suggests that continuous therapy may not be required in all patients.
+
+2. Population
+
+This guideline applies to adult patients aged 18–85 years who have received Therapy G for at least 24 weeks.
+
+3. Intervention
+
+Therapy G is discontinued after 24 weeks in patients who achieve stable clinical response. Reinitiation is considered only if symptoms recur.
+
+4. Monitoring
+
+Monitoring focuses on post-discontinuation relapse detection, not treatment maintenance.
+
+Patients must be assessed at 4 weeks and 8 weeks after discontinuation.
+Conditional monitoring rule 1:
+If symptoms increase by ≥15%, therapy must be reinitiated within 7 days.
+
+Conditional monitoring rule 2:
+If no relapse occurs within 12 weeks, monitoring frequency may be reduced to every 24 weeks.
+
+No monitoring is required during active treatment phases beyond baseline.
+
+5. Outcomes
+
+Successful discontinuation is defined as absence of symptom recurrence within 12 weeks.
+
+Relapse is defined as ≥20% increase in symptom score.
+
+6. Risks
+
+Premature discontinuation increases relapse risk by approximately 25%. Continued therapy increases long-term adverse effects by approximately 10%.
+
+7. Evidence Summary
+
+Evidence is inconclusive. One study shows improved quality of life after discontinuation, while another shows increased relapse rates.

@@ -1,0 +1,173 @@
+{
+  "generated_answer": {
+    "question": "What monitoring is recommended after Therapy A?",
+    "answer": "The provided evidence is insufficient to answer this question.",
+    "citations": [],
+    "abstained": true,
+    "abstention_reason": "insufficient_evidence",
+    "used_chunk_ids": [
+      "doc_001_monitoring_chunk_001",
+      "doc_011_monitoring_chunk_001",
+      "doc_005_intervention_chunk_001",
+      "doc_005_monitoring_chunk_001",
+      "doc_007_monitoring_chunk_001"
+    ],
+    "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+    "metadata": {
+      "top_k": 10,
+      "max_context_chunks": 5,
+      "prompt_chars": 3494,
+      "raw_output_chars": 143
+    }
+  },
+  "verification": {
+    "verification_status": "passed",
+    "unsupported_claims": [],
+    "missing_citations": [],
+    "invalid_citations": [],
+    "safety_warnings": [],
+    "notes": []
+  },
+  "retrieved_chunks": [
+    {
+      "chunk_id": "doc_001_monitoring_chunk_001",
+      "doc_id": "doc_001",
+      "title": "Monitoring Strategy for Therapy A in Condition X",
+      "section": "Monitoring",
+      "text": "Patients starting Therapy A should undergo baseline blood testing, including liver function and inflammatory markers.\n\nFollow-up blood monitoring is recommended within 2–4 weeks after initiation and then every 3 months.\n\nMonitoring at 2–4 weeks is critical, and monitoring at 2–4 weeks should not be delayed beyond 4 weeks.\n\nA reduction in monitoring frequency to every 6 months may be appropriate in some unrelated chronic conditions, but this does not apply to Condition X.",
+      "score": 0.9418753683171844,
+      "rank": 1,
+      "retrieval_method": "hybrid",
+      "metadata": {
+        "document_type": "chronic_management",
+        "contains_noise": true,
+        "contains_contradiction": false,
+        "contains_ambiguity": false,
+        "supports_abstention": false,
+        "contains_conditional_rule": false,
+        "fusion": "weighted_score",
+        "hybrid_score": 0.9418753683171844,
+        "normalised_bm25_score": 1.0,
+        "normalised_dense_score": 0.8062512277239483,
+        "bm25_weight": 0.7,
+        "dense_weight": 0.3,
+        "contributing_methods": [
+          "bm25",
+          "dense"
+        ]
+      }
+    },
+    {
+      "chunk_id": "doc_011_monitoring_chunk_001",
+      "doc_id": "doc_011",
+      "title": "Conflicting Evidence on the Effectiveness of Therapy K in Condition M",
+      "section": "Monitoring",
+      "text": "Baseline and follow-up at 6 weeks and 12 weeks are recommended.",
+      "score": 0.8306211865308135,
+      "rank": 2,
+      "retrieval_method": "hybrid",
+      "metadata": {
+        "document_type": "conflicting_evidence",
+        "contains_noise": false,
+        "contains_contradiction": true,
+        "contains_ambiguity": true,
+        "supports_abstention": false,
+        "contains_conditional_rule": false,
+        "fusion": "weighted_score",
+        "hybrid_score": 0.8306211865308135,
+        "normalised_bm25_score": 0.9830787717655902,
+        "normalised_dense_score": 0.47488682098300145,
+        "bm25_weight": 0.7,
+        "dense_weight": 0.3,
+        "contributing_methods": [
+          "bm25",
+          "dense"
+        ]
+      }
+    },
+    {
+      "chunk_id": "doc_005_intervention_chunk_001",
+      "doc_id": "doc_005",
+      "title": "Risk-Stratified Management of Therapy E in Metabolic Condition R",
+      "section": "Intervention",
+      "text": "Therapy E is initiated at a dose of 75 mg administered once daily. Dose escalation to 100 mg daily may be considered after 8 weeks if biomarker reduction is less than 25%. Therapy should be continued for a minimum of 16 weeks before determining overall treatment effectiveness. Discontinuation is recommended if no clinically meaningful improvement is observed after 20 weeks.",
+      "score": 0.6682552419515483,
+      "rank": 3,
+      "retrieval_method": "hybrid",
+      "metadata": {
+        "document_type": "risk_stratified_management",
+        "contains_noise": true,
+        "contains_contradiction": false,
+        "contains_ambiguity": true,
+        "supports_abstention": false,
+        "contains_conditional_rule": true,
+        "fusion": "weighted_score",
+        "hybrid_score": 0.6682552419515483,
+        "normalised_bm25_score": 0.9346691016776395,
+        "normalised_dense_score": 0.04662290259066884,
+        "bm25_weight": 0.7,
+        "dense_weight": 0.3,
+        "contributing_methods": [
+          "bm25",
+          "dense"
+        ]
+      }
+    },
+    {
+      "chunk_id": "doc_005_monitoring_chunk_001",
+      "doc_id": "doc_005",
+      "title": "Risk-Stratified Management of Therapy E in Metabolic Condition R",
+      "section": "Monitoring",
+      "text": "Patients should undergo laboratory monitoring every 6 weeks during the first 24 weeks of therapy.\n\nThis 6-week interval is equivalent to approximately 1.5 months, and both intervals are used interchangeably in some reports.\n\nSome unrelated metabolic conditions use 3-month intervals, but this schedule is not recommended for Condition R during early treatment.",
+      "score": 0.6415892248268295,
+      "rank": 4,
+      "retrieval_method": "hybrid",
+      "metadata": {
+        "document_type": "risk_stratified_management",
+        "contains_noise": true,
+        "contains_contradiction": false,
+        "contains_ambiguity": true,
+        "supports_abstention": false,
+        "contains_conditional_rule": true,
+        "fusion": "weighted_score",
+        "hybrid_score": 0.6415892248268295,
+        "normalised_bm25_score": 0.6812046339527119,
+        "normalised_dense_score": 0.5491532701997707,
+        "bm25_weight": 0.7,
+        "dense_weight": 0.3,
+        "contributing_methods": [
+          "bm25",
+          "dense"
+        ]
+      }
+    },
+    {
+      "chunk_id": "doc_007_monitoring_chunk_001",
+      "doc_id": "doc_007",
+      "title": "Discontinuation and Reinitiation Strategy for Therapy G in Condition T",
+      "section": "Monitoring",
+      "text": "Monitoring focuses on post-discontinuation relapse detection, not treatment maintenance.\n\nPatients must be assessed at 4 weeks and 8 weeks after discontinuation.\nConditional monitoring rule 1:\nIf symptoms increase by ≥15%, therapy must be reinitiated within 7 days.\n\nConditional monitoring rule 2:\nIf no relapse occurs within 12 weeks, monitoring frequency may be reduced to every 24 weeks.\n\nNo monitoring is required during active treatment phases beyond baseline.",
+      "score": 0.6250626853521681,
+      "rank": 5,
+      "retrieval_method": "hybrid",
+      "metadata": {
+        "document_type": "discontinuation_protocol",
+        "contains_noise": false,
+        "contains_contradiction": true,
+        "contains_ambiguity": false,
+        "supports_abstention": false,
+        "contains_conditional_rule": true,
+        "fusion": "weighted_score",
+        "hybrid_score": 0.6250626853521681,
+        "normalised_bm25_score": 0.46437526478881175,
+        "normalised_dense_score": 1.0,
+        "bm25_weight": 0.7,
+        "dense_weight": 0.3,
+        "contributing_methods": [
+          "bm25",
+          "dense"
+        ]
+      }
+    }
+  ]
+}

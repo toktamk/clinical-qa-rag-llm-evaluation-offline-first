@@ -1,0 +1,283 @@
+{
+  "eval_file": "data/evaluation/clinical_rag_eval_full.draft.jsonl",
+  "model": "mock",
+  "retriever": "hybrid",
+  "fusion_method": "weighted",
+  "top_k": 10,
+  "max_context_chunks": 5,
+  "summary": {
+    "total_items": 5,
+    "verification_pass_rate": 1.0,
+    "abstention_accuracy": 0.0,
+    "gold_abstention_rate": 0.0,
+    "predicted_abstention_rate": 1.0,
+    "forced_abstention_rate": 0.0,
+    "citation_precision_macro": 0.0,
+    "citation_recall_macro": 0.0,
+    "citation_precision_non_abstained_macro": 0.0,
+    "citation_recall_non_abstained_macro": 0.0,
+    "latency_mean_ms": 29.91961999796331,
+    "latency_p50_ms": 25.91170000960119,
+    "latency_p95_ms": 47.38168000476435,
+    "category_counts": {
+      "direct_evidence": 3,
+      "clinical_risk_sensitive": 1,
+      "multi_hop_evidence": 1
+    },
+    "difficulty_counts": {
+      "easy": 3,
+      "medium": 2
+    },
+    "verification_status_counts": {
+      "passed": 5
+    }
+  },
+  "per_item": [
+    {
+      "question_id": "q_doc_001_001",
+      "question": "According to the guideline, what monitoring is recommended in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 52.65130000771023,
+      "required_citations": [
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_002",
+      "question": "How does the guideline define treatment success or response in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 25.678399979369715,
+      "required_citations": [
+        "doc_001_outcomes_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_003",
+      "question": "What risks or adverse effects are reported in doc_001?",
+      "category": "clinical_risk_sensitive",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 26.303199992980808,
+      "required_citations": [
+        "doc_001_risks_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_004",
+      "question": "For the population described in doc_001, what monitoring approach is recommended?",
+      "category": "multi_hop_evidence",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 19.0535000001546,
+      "required_citations": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 2,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_005",
+      "question": "According to the guideline, how is the intervention described in doc_001 administered or adjusted?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 25.91170000960119,
+      "required_citations": [
+        "doc_001_intervention_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "The provided evidence is insufficient to answer this question.",
+      "raw_model_output": "Answer: The provided evidence is insufficient to answer this question.\nCitations: null\nAbstained: true\nAbstention reason: insufficient_evidence",
+      "retrieved_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    }
+  ]
+}

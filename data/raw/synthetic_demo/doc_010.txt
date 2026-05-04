@@ -1,0 +1,36 @@
+# 📄 **Doc ID: doc_010**
+
+## **Title: Short-Term Stabilisation Protocol for Condition W Using Intervention J**
+
+### **1. Background**
+
+Condition W is an acute destabilising disorder affecting approximately 2–3% of the population. Rapid stabilisation is critical to prevent complications.
+
+### **2. Population**
+
+This guideline applies to adult patients aged 18–65 years presenting with acute episodes of Condition W. Chronic cases are excluded.
+
+### **3. Intervention**
+
+Intervention J is administered as an initial dose of 150 mg followed by a maintenance dose of 50 mg every 12 hours for 48 hours.
+
+### **4. Monitoring**
+
+Baseline assessment must include vital signs and symptom severity scoring. Patients must be monitored continuously for the first 6 hours.
+
+Follow-up monitoring must occur at 12 hours and 24 hours. Routine monitoring may be discontinued after 72 hours if stability is achieved.
+
+**Conditional monitoring rule:**
+If instability persists beyond 24 hours, monitoring must continue every 6 hours until stabilisation.
+
+### **5. Outcomes**
+
+Successful stabilisation is defined as symptom resolution within 24–48 hours. Failure is defined as persistent instability after 72 hours.
+
+### **6. Risks**
+
+Common adverse effects include sedation (22%) and hypotension (10%). Severe complications occur in approximately 1% of cases.
+
+### **7. Evidence Summary**
+
+Evidence from controlled trials involving 900 patients demonstrates rapid stabilisation with Intervention J compared to standard care.

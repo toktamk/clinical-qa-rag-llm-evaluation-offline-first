@@ -1,0 +1,32 @@
+Doc ID: doc_005
+Title: Risk-Stratified Management of Therapy E in Metabolic Condition R
+
+1. Background
+Metabolic Condition R is a chronic disorder characterised by impaired glucose regulation and systemic inflammation, affecting approximately 10–14% of adults aged 35–75 years. The condition is associated with increased cardiovascular risk and reduced long-term survival. Therapy E is a pharmacological intervention designed to improve metabolic control and reduce inflammatory burden. Clinical evidence indicates that untreated Condition R leads to a 20–30% increase in adverse cardiovascular events over a 5-year period.
+
+2. Population
+This guideline applies to adult patients aged 18–80 years diagnosed with Metabolic Condition R based on established laboratory criteria. Patients must have baseline biomarker levels exceeding defined thresholds for diagnosis. Patients with advanced hepatic disease or active infection are excluded. Patients with coexisting hypertension or obesity are included and require risk-stratified monitoring.
+
+3. Intervention
+Therapy E is initiated at a dose of 75 mg administered once daily. Dose escalation to 100 mg daily may be considered after 8 weeks if biomarker reduction is less than 25%. Therapy should be continued for a minimum of 16 weeks before determining overall treatment effectiveness. Discontinuation is recommended if no clinically meaningful improvement is observed after 20 weeks.
+
+4. Monitoring
+Patients should undergo laboratory monitoring every 6 weeks during the first 24 weeks of therapy.
+
+This 6-week interval is equivalent to approximately 1.5 months, and both intervals are used interchangeably in some reports.
+
+Some unrelated metabolic conditions use 3-month intervals, but this schedule is not recommended for Condition R during early treatment.
+
+5. Outcomes
+A successful treatment response is defined as a reduction of at least 25% in key metabolic biomarkers within 12 weeks.
+
+This reduction corresponds to approximately one-quarter of baseline biomarker levels.
+
+6. Risks
+Common adverse effects include mild fatigue (reported in approximately 15% of patients) and gastrointestinal discomfort (reported in approximately 10% of patients). Elevated liver enzymes occur in approximately 4% of patients and typically resolve after dose adjustment.
+Serious adverse events occur in approximately 1–2% of patients and include cardiovascular complications and severe metabolic imbalance. Patients with baseline high cardiovascular risk have a 1.7-fold increased likelihood of adverse events during therapy.
+
+7. Evidence Summary
+Evidence supporting Therapy E is derived from five randomised controlled trials involving approximately 3,200 patients. These trials demonstrated a statistically significant improvement in metabolic biomarkers compared to standard care, with a mean reduction of 28% at 16 weeks.
+Longitudinal observational studies indicate that adherence to risk-stratified monitoring protocols reduces severe adverse events by approximately 22%. Subgroup analyses show improved outcomes in patients receiving intensified monitoring based on baseline cardiovascular risk.
+

@@ -1,0 +1,533 @@
+{
+  "eval_file": "data/evaluation/clinical_rag_eval_full.draft.jsonl",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "retriever": "hybrid",
+  "fusion_method": "weighted",
+  "top_k": 10,
+  "max_context_chunks": 5,
+  "summary": {
+    "total_items": 10,
+    "verification_pass_rate": 1.0,
+    "abstention_accuracy": 0.0,
+    "gold_abstention_rate": 0.0,
+    "predicted_abstention_rate": 1.0,
+    "forced_abstention_rate": 0.4,
+    "citation_precision_macro": 0.0,
+    "citation_recall_macro": 0.0,
+    "citation_precision_non_abstained_macro": 0.0,
+    "citation_recall_non_abstained_macro": 0.0,
+    "latency_mean_ms": 32898.93786999746,
+    "latency_p50_ms": 36684.156000002986,
+    "latency_p95_ms": 38190.83694999572,
+    "category_counts": {
+      "direct_evidence": 6,
+      "clinical_risk_sensitive": 1,
+      "multi_hop_evidence": 1,
+      "temporal_reasoning": 1,
+      "citation_stress_test": 1
+    },
+    "difficulty_counts": {
+      "easy": 5,
+      "medium": 4,
+      "hard": 1
+    },
+    "verification_status_counts": {
+      "passed": 10
+    }
+  },
+  "per_item": [
+    {
+      "question_id": "q_doc_001_001",
+      "question": "According to the guideline, what monitoring is recommended in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 38038.23929998907,
+      "required_citations": [
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nI have followed all the given instructions and criteria. I have used the guidelines from the document to provide a valid answer. However, there seems to be a discrepancy between the first two chunks where the text about the monitoring strategy for Condition X is different from the rest of the document. This inconsistency might indicate that the information provided in the first chunk is insufficient to answer the question accurately. Therefore, I will abstain from providing a full answer based solely on the first two chunks. Please let me know if you would like me to proceed with the third chunk instead. \n\nIf you need further clarification or additional information, please let me know. I am here to assist you according to the guidelines. Thank you! Let me know if you require any other assistance. [END_OF_TEXT] To determine the correct answer to the question \"According to the guideline, what monitoring is recommended in doc_001?\", we must carefully analyze the provided information and ensure that each piece of evidence supports the requested answer. Here's how I'll approach this task:\n\n### Step-by-Step Analysis\n\n1. **Identify Relevant Information**:\n   - The first chunk mentions that the guideline recommends monitoring in doc_001.\n   - The second chunk provides specific details about the monitoring",
+      "raw_model_output": "Explanation:\nI have followed all the given instructions and criteria. I have used the guidelines from the document to provide a valid answer. However, there seems to be a discrepancy between the first two chunks where the text about the monitoring strategy for Condition X is different from the rest of the document. This inconsistency might indicate that the information provided in the first chunk is insufficient to answer the question accurately. Therefore, I will abstain from providing a full answer based solely on the first two chunks. Please let me know if you would like me to proceed with the third chunk instead. \n\nIf you need further clarification or additional information, please let me know. I am here to assist you according to the guidelines. Thank you! Let me know if you require any other assistance. [END_OF_TEXT] To determine the correct answer to the question \"According to the guideline, what monitoring is recommended in doc_001?\", we must carefully analyze the provided information and ensure that each piece of evidence supports the requested answer. Here's how I'll approach this task:\n\n### Step-by-Step Analysis\n\n1. **Identify Relevant Information**:\n   - The first chunk mentions that the guideline recommends monitoring in doc_001.\n   - The second chunk provides specific details about the monitoring",
+      "retrieved_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_002",
+      "question": "How does the guideline define treatment success or response in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 18331.686499994248,
+      "required_citations": [
+        "doc_001_outcomes_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nThe reference text provides information about the definition of treatment success or response in Condition X using the guidelines outlined in doc_004_outcomes_chunk_001. However, there is no mention of how the guideline defines treatment success or response in doc_001. Therefore, I must abstain from providing a valid answer based solely on the given information. \n\nThe correct answer would be:\n\"The provided evidence is insufficient to answer this question.\" \nI will continue answering based on the available information. Please provide additional details or clarification if needed.",
+      "raw_model_output": "Explanation:\nThe reference text provides information about the definition of treatment success or response in Condition X using the guidelines outlined in doc_004_outcomes_chunk_001. However, there is no mention of how the guideline defines treatment success or response in doc_001. Therefore, I must abstain from providing a valid answer based solely on the given information. \n\nThe correct answer would be:\n\"The provided evidence is insufficient to answer this question.\" \nI will continue answering based on the available information. Please provide additional details or clarification if needed.",
+      "retrieved_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_001_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_001_background_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_003",
+      "question": "What risks or adverse effects are reported in doc_001?",
+      "category": "clinical_risk_sensitive",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 37584.50689999154,
+      "required_citations": [
+        "doc_001_risks_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nThe document does not provide specific information about the risks or adverse effects reported in doc_001. Therefore, I must abstain from providing a response based on the given evidence. The correct answer should be \"The provided evidence is insufficient to answer this question.\" However, since no specific document was mentioned, I will assume that the question refers to one of the documents listed above. Please let me know which one you would like me to use as the reference document. Otherwise, I will proceed with the assumption that the question is referring to the first document listed. In that case, the answer would be:\n\n- Common adverse effects include mild gastrointestinal symptoms. Rare complications include liver enzyme elevation requiring discontinuation.\n\n- Adverse effects vary and are inconsistently reported.\n\n- Common adverse effects include transient dizziness (reported in approximately 20% of patients) and mild hypotension (reported in approximately 8% of patients).\n\n- Common adverse effects include mild fatigue (reported in approximately 15% of patients) and gastrointestinal discomfort (reported in approximately 10% of patients).\n\n- Common adverse effects include mild fatigue (reported in approximately 15% of patients) and headache (8%).\n\n- Common adverse effects include mild fatigue (reported in approximately 1",
+      "raw_model_output": "Explanation:\nThe document does not provide specific information about the risks or adverse effects reported in doc_001. Therefore, I must abstain from providing a response based on the given evidence. The correct answer should be \"The provided evidence is insufficient to answer this question.\" However, since no specific document was mentioned, I will assume that the question refers to one of the documents listed above. Please let me know which one you would like me to use as the reference document. Otherwise, I will proceed with the assumption that the question is referring to the first document listed. In that case, the answer would be:\n\n- Common adverse effects include mild gastrointestinal symptoms. Rare complications include liver enzyme elevation requiring discontinuation.\n\n- Adverse effects vary and are inconsistently reported.\n\n- Common adverse effects include transient dizziness (reported in approximately 20% of patients) and mild hypotension (reported in approximately 8% of patients).\n\n- Common adverse effects include mild fatigue (reported in approximately 15% of patients) and gastrointestinal discomfort (reported in approximately 10% of patients).\n\n- Common adverse effects include mild fatigue (reported in approximately 15% of patients) and headache (8%).\n\n- Common adverse effects include mild fatigue (reported in approximately 1",
+      "retrieved_chunk_ids": [
+        "doc_001_risks_chunk_001",
+        "doc_012_risks_chunk_001",
+        "doc_006_risks_chunk_001",
+        "doc_005_risks_chunk_001",
+        "doc_008_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_004",
+      "question": "For the population described in doc_001, what monitoring approach is recommended?",
+      "category": "multi_hop_evidence",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 37524.063499993645,
+      "required_citations": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 2,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nI have followed all the given rules. I have used the correct format for each chunk ID, cited relevant statements where possible, and answered the question accurately while adhering to the guidelines. No additional information was needed beyond the provided text. Therefore, the answer is INVALID as there were no valid references or answers available. \n\nIf you need further clarification or assistance, please let me know. I'm here to help! 🌟✨✨\n\n**Note:** This response is designed to provide a clear and concise answer based on the given information. If you have specific questions about the content or structure of the document, feel free to ask! 📝🔍✨✨\n\n**Thank you for your understanding!** 🚀✨✨\n\n**Disclaimer:** This answer is generated from the provided text and follows the specified rules. Any inaccuracies or errors are my responsibility. Please review the original source material before providing feedback. 🙏✨✨\n\n**Please note that this answer is generated from the provided text and follows the specified rules. Any inaccuracies or errors are my responsibility. Please review the original source material before providing feedback. 🙏✨✨**\n\n**Thank you for your patience and understanding!** 🚀✨✨\n\n**Disclaimer:** This",
+      "raw_model_output": "Explanation:\nI have followed all the given rules. I have used the correct format for each chunk ID, cited relevant statements where possible, and answered the question accurately while adhering to the guidelines. No additional information was needed beyond the provided text. Therefore, the answer is INVALID as there were no valid references or answers available. \n\nIf you need further clarification or assistance, please let me know. I'm here to help! 🌟✨✨\n\n**Note:** This response is designed to provide a clear and concise answer based on the given information. If you have specific questions about the content or structure of the document, feel free to ask! 📝🔍✨✨\n\n**Thank you for your understanding!** 🚀✨✨\n\n**Disclaimer:** This answer is generated from the provided text and follows the specified rules. Any inaccuracies or errors are my responsibility. Please review the original source material before providing feedback. 🙏✨✨\n\n**Please note that this answer is generated from the provided text and follows the specified rules. Any inaccuracies or errors are my responsibility. Please review the original source material before providing feedback. 🙏✨✨**\n\n**Thank you for your patience and understanding!** 🚀✨✨\n\n**Disclaimer:** This",
+      "retrieved_chunk_ids": [
+        "doc_001_population_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_005",
+      "question": "According to the guideline, how is the intervention described in doc_001 administered or adjusted?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 35844.24850001233,
+      "required_citations": [
+        "doc_001_intervention_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nThe intervention described in doc_001 is administered at a standard dose of 50 mg daily. No specific adjustments were mentioned for dose adjustment. The intervention in doc_006 involves a single dose of 200 mg at the onset of symptoms. No specific adjustments were made for dose adjustment. The intervention in doc_003 involves administering therapy C as a single dose during acute episodes. No specific adjustments were made for dose adjustment. The intervention in doc_011 involves administering therapy K at 50 mg daily for 12 weeks. No specific adjustments were made for dose adjustment. The intervention in doc_012 involves administering therapy L at 30–60 mg depending on clinical judgement. No specific adjustments were made for dose adjustment. \n\nThe interventions described in doc_001, doc_006, doc_003, doc_009, and doc_011 do not mention any specific adjustments for dose adjustment. Therefore, no information can be extracted about the intervention being administered or adjusted according to the guidelines. Hence, the answer is INVALID.",
+      "raw_model_output": "Explanation:\nThe intervention described in doc_001 is administered at a standard dose of 50 mg daily. No specific adjustments were mentioned for dose adjustment. The intervention in doc_006 involves a single dose of 200 mg at the onset of symptoms. No specific adjustments were made for dose adjustment. The intervention in doc_003 involves administering therapy C as a single dose during acute episodes. No specific adjustments were made for dose adjustment. The intervention in doc_011 involves administering therapy K at 50 mg daily for 12 weeks. No specific adjustments were made for dose adjustment. The intervention in doc_012 involves administering therapy L at 30–60 mg depending on clinical judgement. No specific adjustments were made for dose adjustment. \n\nThe interventions described in doc_001, doc_006, doc_003, doc_009, and doc_011 do not mention any specific adjustments for dose adjustment. Therefore, no information can be extracted about the intervention being administered or adjusted according to the guidelines. Hence, the answer is INVALID.",
+      "retrieved_chunk_ids": [
+        "doc_001_intervention_chunk_001",
+        "doc_006_intervention_chunk_001",
+        "doc_003_intervention_chunk_001",
+        "doc_011_intervention_chunk_001",
+        "doc_012_intervention_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_006",
+      "question": "What evidence is summarised for the recommendation in doc_001?",
+      "category": "direct_evidence",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 34893.69679999072,
+      "required_citations": [
+        "doc_001_evidence_summary_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_outcomes_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nThe reference text does not provide a specific document ID or title. Therefore, I must rely solely on the information given about the references and their retrieval methods. Since no specific document IDs or titles were mentioned, I will assume that the references refer to different documents but do not specify which one they are referring to. \n\nBased on the available information, there is no clear evidence from the references that directly summarizes the recommendation in doc_001. The references discuss various aspects related to therapy A in condition X, including patient population, intervention details, outcomes, and risk factors. However, none of these references explicitly mention the recommendation in doc_001.\n\nTherefore, the answer is INVALID because the provided evidence is insufficient to answer the question about what evidence is summarised for the recommendation in doc_001. To properly address this question, we would need additional context or a specific document ID/section number that mentions the recommendation in question. Without such information, the answer remains INVALID. \n\nIf you have more specific documentation or a particular section that needs to be referenced, please provide that so I can assist further. Otherwise, the answer is INVALID.",
+      "raw_model_output": "Explanation:\nThe reference text does not provide a specific document ID or title. Therefore, I must rely solely on the information given about the references and their retrieval methods. Since no specific document IDs or titles were mentioned, I will assume that the references refer to different documents but do not specify which one they are referring to. \n\nBased on the available information, there is no clear evidence from the references that directly summarizes the recommendation in doc_001. The references discuss various aspects related to therapy A in condition X, including patient population, intervention details, outcomes, and risk factors. However, none of these references explicitly mention the recommendation in doc_001.\n\nTherefore, the answer is INVALID because the provided evidence is insufficient to answer the question about what evidence is summarised for the recommendation in doc_001. To properly address this question, we would need additional context or a specific document ID/section number that mentions the recommendation in question. Without such information, the answer remains INVALID. \n\nIf you have more specific documentation or a particular section that needs to be referenced, please provide that so I can assist further. Otherwise, the answer is INVALID.",
+      "retrieved_chunk_ids": [
+        "doc_001_evidence_summary_chunk_001",
+        "doc_001_risks_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_001_outcomes_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_007",
+      "question": "What timing or follow-up schedule is described in doc_001?",
+      "category": "temporal_reasoning",
+      "difficulty": "medium",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 21748.24390001595,
+      "required_citations": [
+        "doc_001_intervention_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_001_outcomes_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_012_outcomes_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_outcomes_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 3,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nIn the given text, there is no explicit mention of a specific document or section related to the question about the timing or follow-up schedule for therapy A in Condition X. Therefore, I must provide an explanation based on the available information.\n\nSince the question asks specifically about the timing or follow-up schedule, we need to look for a relevant document that provides such information. However, none of the documents explicitly state the timing or follow-up schedule for therapy A in Condition X. \n\nTherefore, the answer is INVALID because the provided evidence is insufficient to answer the question regarding the timing or follow-up schedule for therapy A in Condition X. The correct response would be:\n\n\"The provided evidence is insufficient to answer this question.\"",
+      "raw_model_output": "Explanation:\nIn the given text, there is no explicit mention of a specific document or section related to the question about the timing or follow-up schedule for therapy A in Condition X. Therefore, I must provide an explanation based on the available information.\n\nSince the question asks specifically about the timing or follow-up schedule, we need to look for a relevant document that provides such information. However, none of the documents explicitly state the timing or follow-up schedule for therapy A in Condition X. \n\nTherefore, the answer is INVALID because the provided evidence is insufficient to answer the question regarding the timing or follow-up schedule for therapy A in Condition X. The correct response would be:\n\n\"The provided evidence is insufficient to answer this question.\"",
+      "retrieved_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_intervention_chunk_001",
+        "doc_012_outcomes_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_001_outcomes_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_001_008",
+      "question": "In doc_001, which monitoring recommendation applies to the target condition, and what distracting information should not be treated as the recommendation?",
+      "category": "citation_stress_test",
+      "difficulty": "hard",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 38039.3025999947,
+      "required_citations": [
+        "doc_001_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_006_monitoring_chunk_001",
+        "doc_001_background_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "<doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX",
+      "raw_model_output": "<doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX>: <text from chunk> [CHUNK_ID] </chunk>, <doc_XXX",
+      "retrieved_chunk_ids": [
+        "doc_001_monitoring_chunk_001",
+        "doc_001_population_chunk_001",
+        "doc_006_monitoring_chunk_001",
+        "doc_001_background_chunk_001",
+        "doc_001_risks_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_002_001",
+      "question": "According to the guideline, what monitoring is recommended in doc_002?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": false,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 28670.57109999587,
+      "required_citations": [
+        "doc_002_monitoring_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_011_monitoring_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_002_evidence_summary_chunk_001",
+        "doc_002_monitoring_chunk_001",
+        "doc_005_monitoring_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nIn the given document, there is no mention of monitoring in condition Y. Therefore, I must provide a false answer based on the information available. The correct answer would be:\n\n\"The provided evidence is insufficient to answer this question.\"\n\nI apologize for any confusion caused by my previous response. Let me rephrase the question clearly and provide the necessary information from the given documents:\n\n**Question:**\nAccording to the guideline, what monitoring is recommended in doc_002?\n\n**Evidence:**\n[CHUNK_ID: doc_011_monitoring_chunk_001]\nDocument: doc_011\nTitle: Conflicting Evidence on the Effectiveness of Therapy K in Condition M\nSection: Monitoring\nRank: 1\nRetrieval method: hybrid\nText:\nBaseline and follow-up at 6 weeks and 12 weeks are recommended.\n\n---\n\nPlease let me know if you need further clarification or assistance. Thank you!",
+      "raw_model_output": "Explanation:\nIn the given document, there is no mention of monitoring in condition Y. Therefore, I must provide a false answer based on the information available. The correct answer would be:\n\n\"The provided evidence is insufficient to answer this question.\"\n\nI apologize for any confusion caused by my previous response. Let me rephrase the question clearly and provide the necessary information from the given documents:\n\n**Question:**\nAccording to the guideline, what monitoring is recommended in doc_002?\n\n**Evidence:**\n[CHUNK_ID: doc_011_monitoring_chunk_001]\nDocument: doc_011\nTitle: Conflicting Evidence on the Effectiveness of Therapy K in Condition M\nSection: Monitoring\nRank: 1\nRetrieval method: hybrid\nText:\nBaseline and follow-up at 6 weeks and 12 weeks are recommended.\n\n---\n\nPlease let me know if you need further clarification or assistance. Thank you!",
+      "retrieved_chunk_ids": [
+        "doc_011_monitoring_chunk_001",
+        "doc_001_monitoring_chunk_001",
+        "doc_002_evidence_summary_chunk_001",
+        "doc_002_monitoring_chunk_001",
+        "doc_005_monitoring_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    },
+    {
+      "question_id": "q_doc_002_002",
+      "question": "How does the guideline define treatment success or response in doc_002?",
+      "category": "direct_evidence",
+      "difficulty": "easy",
+      "gold_requires_abstention": false,
+      "predicted_abstained": true,
+      "abstention_correct": false,
+      "forced_abstention": true,
+      "verification_status": "passed",
+      "verification_passed": true,
+      "latency_ms": 38314.819599996554,
+      "required_citations": [
+        "doc_002_outcomes_chunk_001"
+      ],
+      "predicted_citations": [],
+      "used_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_012_monitoring_chunk_001",
+        "doc_004_population_chunk_001"
+      ],
+      "citation_metrics": {
+        "predicted_citation_count": 0,
+        "required_citation_count": 1,
+        "valid_predicted_citation_count": 0,
+        "correct_required_citation_count": 0,
+        "citation_precision": 0.0,
+        "citation_recall": 0.0
+      },
+      "answer": "Explanation:\nThe guideline defines treatment success or response as stabilisation of biomarker variability within ±10% over a 12-week period. It does not specify a numerical threshold for success; instead, it uses a range of ±10%. The definition of instability is broader, encompassing ≥20% fluctuation within any 4-week window. The criteria for success are less specific but still related to stabilization of biomarker variability. The guidelines provide different definitions for stability and success based on the level of biomarker fluctuations. The reference document mentions that some observations suggest benefits from prolonged monitoring beyond 48 hours, which could be considered a numerical threshold for success. However, the exact numerical threshold is not specified in the given text. Therefore, the answer must include a citation to refer to the relevant section of the document. The answer is INVALID because there is no clear numerical threshold mentioned in the given information. To provide a valid answer, we would need additional context about the numerical thresholds used in the guidelines. \n\nPlease note that I am unable to directly access external documents or extract specific numerical values from them. Instead, I have relied solely on the provided text to infer the necessary information. If you have any questions regarding the interpretation of the guidelines or the use of specific",
+      "raw_model_output": "Explanation:\nThe guideline defines treatment success or response as stabilisation of biomarker variability within ±10% over a 12-week period. It does not specify a numerical threshold for success; instead, it uses a range of ±10%. The definition of instability is broader, encompassing ≥20% fluctuation within any 4-week window. The criteria for success are less specific but still related to stabilization of biomarker variability. The guidelines provide different definitions for stability and success based on the level of biomarker fluctuations. The reference document mentions that some observations suggest benefits from prolonged monitoring beyond 48 hours, which could be considered a numerical threshold for success. However, the exact numerical threshold is not specified in the given text. Therefore, the answer must include a citation to refer to the relevant section of the document. The answer is INVALID because there is no clear numerical threshold mentioned in the given information. To provide a valid answer, we would need additional context about the numerical thresholds used in the guidelines. \n\nPlease note that I am unable to directly access external documents or extract specific numerical values from them. Instead, I have relied solely on the provided text to infer the necessary information. If you have any questions regarding the interpretation of the guidelines or the use of specific",
+      "retrieved_chunk_ids": [
+        "doc_004_outcomes_chunk_001",
+        "doc_005_outcomes_chunk_001",
+        "doc_006_evidence_summary_chunk_001",
+        "doc_012_monitoring_chunk_001",
+        "doc_004_population_chunk_001"
+      ],
+      "verification": {
+        "verification_status": "passed",
+        "unsupported_claims": [],
+        "missing_citations": [],
+        "invalid_citations": [],
+        "safety_warnings": [],
+        "notes": []
+      }
+    }
+  ]
+}
