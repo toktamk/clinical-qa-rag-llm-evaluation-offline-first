@@ -1,0 +1,12 @@
+services:
+  rag-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: clinical-rag-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ..:/app
+    environment:
+      - PYTHONUNBUFFERED=1

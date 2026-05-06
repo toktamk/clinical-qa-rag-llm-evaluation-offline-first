@@ -1,9 +1,16 @@
 # Offline-First Clinical LLM System
 
 Evaluation-Driven RAG with Grounded Generation Under Real-World Constraints
-A production-grade, fully offline Retrieval-Augmented Generation (RAG) system for clinical-style documents under real-world constraints: privacy, local inference, citation grounding, abstention, reproducibility, and measurable reliability.
+
+A production-grade, fully offline Retrieval-Augmented Generation (RAG) system for clinical-style documents under real-world constraints: 
+privacy, local inference, citation grounding, abstention, reproducibility, and measurable reliability.
+
+
 This repository is not a chatbot demo. 
-It is an evaluation-first LLM systems project designed to demonstrate senior-level capability in retrieval engineering, grounded generation, verification, failure analysis, and production-oriented ML evaluation.
+
+It is an evaluation-first LLM systems project designed to demonstrate senior-level capability in retrieval engineering, 
+grounded generation, verification, failure analysis, and production-oriented ML evaluation.
+
 > This project is for research and engineering evaluation only. It is not a medical diagnosis system and must not be used for clinical decision-making.
 
 ## Core Capabilities
@@ -12,12 +19,13 @@ It is an evaluation-first LLM systems project designed to demonstrate senior-lev
 - Hybrid retrieval: BM25 + dense embeddings + weighted fusion.
 - Section-aware clinical-style chunking.
 - Citation-grounded generation.
-- Deterministic extractive baseline.
+- Deterministic extractive baseline with strong grounding properties
 - Two-step generation: extract evidence first, then rewrite with a local LLM.
 - Citation preservation and deterministic verification gates.
 - Safe abstention when evidence is insufficient.
 - Retrieval, generation, latency, and LLM-judge quality evaluation.
 - Failure analysis designed around real RAG risks, not only happy-path examples.
+- Fully containerised deployment with FastAPI backend and Streamlit interface
 
 ## System Architecture
 ```text
@@ -47,6 +55,10 @@ Verification layer
    ├── safety checks
    └── fallback to extractive answer when rewrite is unsafe
         ↓
+API layer (FastAPI)
+        ↓
+Frontend interface (Streamlit)
+        ↓
 Evaluation framework
    ├── retrieval metrics
    ├── generation metrics
@@ -58,15 +70,14 @@ Evaluation framework
 The default dataset is synthetic and clinical-style. It is intentionally designed for controlled evaluation rather than clinical use.
 
 It includes:
-- **structured sections:** 
-    - Background, Population, Intervention, Monitoring, Outcomes, Risks, Evidence Summary;
-    - numerical thresholds and temporal statements;
-    - conditional rules;
-    - multi-hop evidence cases;
-    - contradictory evidence;
-    - ambiguous evidence;
-    - insufficient-evidence cases requiring abstention;
-    - distractors and near-relevant content.
+- structured sections such as background, population, intervention, monitoring, outcomes, risks, evidence summary;
+- numerical thresholds and temporal statements;
+- conditional rules;
+- multi-hop evidence cases;
+- contradictory evidence;
+- ambiguous evidence;
+- insufficient-evidence cases requiring abstention;
+- distractors and near-relevant content.
 
 This makes the dataset useful for evaluating retrieval robustness, citation grounding, abstention behaviour, and generation failure modes without privacy or redistribution risk.
 
@@ -102,7 +113,7 @@ Weighted hybrid retrieval achieved the strongest overall retrieval quality on th
 
 **For clinical RAG systems:**
 
-> Hybrid retrieval is not optional — it is required for robust performance.
+Hybrid retrieval is not optional — it is required for robust performance.
 
 **Pure dense retrieval is insufficient for:**
 - guideline-based QA  
@@ -140,6 +151,8 @@ The generation pipeline was evaluated across three strategies under strict clini
   - slightly improves clarity and completeness  
   - maintains high citation quality  
   - introduces significant latency overhead  
+
+- **Latency remains a critical trade-off for local LLM rewriting**
 
 ### Practical Implication
 
@@ -204,6 +217,31 @@ retrieved chunks
   - fluency
   - overall quality
 
+## Deployment
+The system is fully deployable in a local, offline environment.
+
+**Run with Docker**
+
+```text
+docker compose -f docker/docker-compose.yml up --build
+```
+**API Endpoints**
+
+- POST /query
+- POST /retrieve
+- POST /evaluate
+- GET /health
+
+**Frontend**
+
+Streamlit interface provides:
+
+- query input
+- retrieved evidence inspection
+- generated answer with citations
+- verification results
+- latency reporting
+
 ## Reproducibility
 Build chunks:
 ```bash
@@ -257,6 +295,11 @@ reports/
   failure_analysis.md
 docs/
   two_step_generation_evaluation.md
+docker/
+  docker-compose.yml
+  Dockerfile
+frontend/
+  streamlit_app.py
 ```
 ## Limitations
 - The default corpus is synthetic and designed for evaluation, not clinical deployment.
@@ -268,13 +311,16 @@ docs/
 ## Next Engineering Tasks
 - Add reranker ablation: hybrid retrieval with and without cross-encoder reranking.
 - Add retrieval-to-generation error correlation analysis.
-- Add FastAPI endpoint for `/query` and `/evaluate`.
-- Add Streamlit UI showing retrieved chunks, answer, citations, and verifier result.
-- Add Docker CPU-only deployment path.
 - Add optional LoRA/PEFT fine-tuning comparison.
+- Do latency optimisation for local inference
+- Do extended evaluation with real-world datasets
 
 ## Ethical Safeguards
-This repository is intended for AI engineering research and portfolio demonstration only. It does not provide clinical advice, diagnosis, or treatment recommendations. All answer generation is constrained by retrieved evidence, citation checks, and abstention logic.
+This repository is intended for AI engineering research and portfolio demonstration only. 
+
+It does not provide clinical advice, diagnosis, or treatment recommendations. 
+
+All answer generation is constrained by retrieved evidence, citation checks, and abstention logic.
 
 ## Summary
 This project demonstrates production-grade thinking for RAG systems under real-world constraints:
@@ -285,4 +331,5 @@ This project demonstrates production-grade thinking for RAG systems under real-w
 - deterministic verification;
 - latency and quality benchmarking;
 - failure-aware system design.
+
 The strongest current finding is that safe, deterministic generation outperforms direct local LLM generation under strict citation constraints, while two-step rewriting must be justified by measurable quality gains relative to its latency cost.
