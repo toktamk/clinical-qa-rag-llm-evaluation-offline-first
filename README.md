@@ -28,42 +28,19 @@ grounded generation, verification, failure analysis, and production-oriented ML 
 - Fully containerised deployment with FastAPI backend and Streamlit interface
 
 ## System Architecture
+
+![System Architecture](docs/SystemArchitecture.png)
+
+### Pipeline overview
+
 ```text
-Synthetic clinical-style documents
-        ↓
-Parsing + section-aware chunking
-        ↓
-chunks.jsonl
-        ↓
-Retrieval layer
-   ├── BM25 lexical retrieval
-   ├── Dense retrieval with local embeddings + FAISS
-   └── Weighted hybrid fusion
-        ↓
-Top-k evidence chunks
-        ↓
-Generation layer
-   ├── Extractive baseline
-   ├── Direct local LLM generation
-   └── Extract → Rewrite two-step generation
-        ↓
-Citation parsing + abstention detection
-        ↓
-Verification layer
-   ├── citation validation
-   ├── missing-citation enforcement
-   ├── safety checks
-   └── fallback to extractive answer when rewrite is unsafe
-        ↓
-API layer (FastAPI)
-        ↓
-Frontend interface (Streamlit)
-        ↓
-Evaluation framework
-   ├── retrieval metrics
-   ├── generation metrics
-   ├── LLM-judge quality metrics
-   └── latency metrics
+User Query
+→ Hybrid Retrieval
+→ Evidence Chunks
+→ Generation Pipeline
+→ Verification Layer
+→ API and Frontend
+→ Evaluation Framework
 ```
 
 ## Dataset Design
