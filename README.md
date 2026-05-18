@@ -22,6 +22,20 @@ Designed for:
 - reproducible experimentation,
 - and clinically grounded AI workflows.
 
+## Ecosystem Context
+
+This repository is part of a broader Clinical AI Systems Ecosystem exploring:
+- evidence-grounded healthcare AI,
+- multimodal patient modelling,
+- evaluation-aware machine learning,
+- reproducible experimentation,
+- and deployment-oriented clinical AI workflows.
+
+Other repositories in the ecosystem investigate:
+- multimodal survival modelling,
+- medical imaging representation learning,
+- and evidence-aware AI orchestration.
+  
 ### Example Clinical Workflow
 
 A typical evaluation workflow in this repository is:
