@@ -22,6 +22,17 @@ Designed for:
 - reproducible experimentation,
 - and clinically grounded AI workflows.
 
+### Example Clinical Workflow
+
+A typical evaluation workflow in this repository is:
+
+1. Retrieve relevant evidence chunks from clinical-style documents
+2. Validate retrieval quality and citation support
+3. Generate grounded answer using evidence-aware generation
+4. Apply abstention logic if evidence quality is insufficient
+5. Verify citation alignment and response reliability
+6. Produce evaluation reports and latency measurements
+   
 ## Key Capabilities
 ### Retrieval
 
@@ -58,23 +69,21 @@ Designed for:
 
 Clinical and healthcare-oriented RAG systems require substantially stronger guarantees than general-purpose LLM applications.
 
-This repository investigates:
+This repository was motivated by several practical issues observed in healthcare-oriented RAG systems:
+- retrieved evidence that does not fully support generated claims,
+- unstable behaviour under limited-context retrieval,
+- latency constraints during local inference,
+- and limited transparency in generation pipelines.
 
-- grounding fidelity,
-- hallucination mitigation,
-- abstention behaviour,
-- retrieval robustness,
-- and latency/reliability trade-offs
-
-  in evaluation-driven clinical-style QA workflows.
-
-  The focus is not chatbot interaction, but reliable retrieval and evidence-grounded generation under deployment constraints.
-
+The focus is therefore on evidence-grounded generation, verification-aware workflows, and reproducible evaluation rather than conversational fluency alone.
+  
   ## Architecture Pipeline
 
 ![System Architecture](docs/SystemArchitecture.png)
 
 ## Benchmark Highlights
+
+The benchmark results are intended primarily for evaluation methodology analysis and comparative workflow assessment under offline/local deployment settings. They should not be interpreted as clinically validated performance claims.
 
 ### Retrieval Benchmark
 
@@ -110,7 +119,18 @@ Two-step rewriting improves readability while introducing significant latency ov
 - Deterministic verification pipelines
 - Abstention-aware clinical QA workflows
 - Failure-aware evaluation for offline healthcare LLM systems
-  
+
+  ## Failure Scenarios Explored
+
+This repository also investigates several common failure modes in clinical-style RAG systems:
+- retrieval mismatch despite semantically related evidence,
+- unsupported citation generation,
+- overconfident low-evidence responses,
+- latency instability during local inference,
+- and degradation under constrained retrieval quality.
+
+These analyses are included because operational robustness is often as important as answer quality in healthcare AI environments.
+
 ## Technical Stack
 ### Core Frameworks
 
@@ -222,7 +242,18 @@ All generation workflows are constrained by:
 - retrieved evidence,
 - citation verification,
 - and abstention logic.
-  
+
+  ## Engineering Design Priorities
+
+The repository emphasises:
+- modular experimentation,
+- deterministic evaluation,
+- reproducible local inference,
+- transparent retrieval-generation separation,
+- and deployment-oriented benchmarking.
+
+The intention is to support controlled experimentation for healthcare AI workflows rather than build a general-purpose chatbot system.
+
 ## Current Research Direction
 
 - Retrieval-to-generation error correlation analysis
